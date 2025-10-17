@@ -1,0 +1,45 @@
+{
+  "name": "sdd-practice-project",
+  "version": "1.0.0",
+  "description": "SDD (Specification-Driven Development) 實戰練習專案",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose",
+    "lint": "eslint src/**/*.js tests/**/*.js",
+    "lint:fix": "eslint src/**/*.js tests/**/*.js --fix"
+  },
+  "keywords": [
+    "sdd",
+    "tdd",
+    "testing",
+    "specification",
+    "jest",
+    "javascript"
+  ],
+  "author": "SDD Learning Team",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.56.0"
+  },
+  "dependencies": {},
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  }
+}

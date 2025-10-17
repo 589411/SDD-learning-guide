@@ -1,0 +1,40 @@
+# 依賴套件
+node_modules/
+package-lock.json
+
+# 測試覆蓋率報告
+coverage/
+*.lcov
+
+# 環境變數
+.env
+.env.local
+.env.*.local
+
+# IDE 設定檔
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 作業系統檔案
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Log 檔案
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 構建輸出
+dist/
+build/
+out/
+
+# 暫存檔案
+*.tmp
+*.temp
+.cache/
