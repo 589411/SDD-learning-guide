@@ -1,0 +1,31 @@
+# GitHub Pages 設定
+title: SDD 開發技術 - AI 時代的軟體開發實戰指南
+description: 專為非軟體工程師設計的規格驅動開發完整教材
+author: SDD 開發技術團隊
+
+# 啟用相對連結支持
+relative_links:
+  enabled: true
+  collections: true
+
+# Markdown 設定
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  
+# 編碼設定
+encoding: utf-8
+
+# 包含的檔案
+include:
+  - _*
+  
+# 排除的檔案
+exclude:
+  - node_modules/
+  - .git/
+  - .gitignore
+  
+# 主題設定（GitHub Pages 預設主題）
+theme: jekyll-theme-minimal
