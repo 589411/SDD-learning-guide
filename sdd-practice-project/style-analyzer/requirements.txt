@@ -1,0 +1,16 @@
+# 風格特徵提取器 - Python 依賴套件
+
+# 自然語言處理
+nltk==3.8.1
+vaderSentiment==3.3.2
+
+# 測試框架
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# 資料處理
+python-dateutil==2.8.2
+
+# 開發工具
+black==23.12.1
+flake8==6.1.0

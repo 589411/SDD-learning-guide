@@ -1,0 +1,62 @@
+{
+  "kb_20251017_001": {
+    "id": "kb_20251017_001",
+    "title": "規格驅動開發（SDD）概念",
+    "content": "規格驅動開發（Specification-Driven Development, SDD）是一種將需求規格置於開發流程核心的方法論。與傳統「先寫程式，再想需求」的方式不同，SDD 強調：\n\n1. 規格先行：在寫任何程式碼前，先清楚定義「要做什麼」\n2. 規格即文件：規格本身就是最準確的文件\n3. 規格可測試：規格應該能轉換為自動化測試\n4. 規格是溝通工具：團隊、AI、未來的自己都能理解",
+    "tags": ["sdd", "開發方法論", "軟體工程"],
+    "created_at": "2025-10-17T22:00:00",
+    "updated_at": "2025-10-17T22:00:00",
+    "metadata": {
+      "word_count": 156,
+      "read_time": 1
+    }
+  },
+  "kb_20251017_002": {
+    "id": "kb_20251017_002",
+    "title": "User Story 撰寫技巧",
+    "content": "User Story（使用者故事）是敏捷開發中最重要的需求描述工具。使用簡單的三段式結構：\n\n身為 <角色 Who>，我想要 <功能 What>，以便於 <價值 Why>\n\n範例：\n身為一個線上教師，我想要設定我每週可以授課的時段，以便於學生知道什麼時候可以預約我的課程。\n\n撰寫要點：\n- 角色要具體（不要只寫「使用者」）\n- 功能要明確（一個 Story 只做一件事）\n- 價值要清楚（為什麼需要這個功能）",
+    "tags": ["user story", "需求分析", "敏捷開發"],
+    "created_at": "2025-10-17T22:05:00",
+    "updated_at": "2025-10-17T22:05:00",
+    "metadata": {
+      "word_count": 145,
+      "read_time": 1
+    }
+  },
+  "kb_20251017_003": {
+    "id": "kb_20251017_003",
+    "title": "Gherkin 語法基礎",
+    "content": "Gherkin 是一種用於撰寫驗收條件的語言，使用 Given-When-Then 結構：\n\nGiven（前提條件）：描述初始狀態\nWhen（執行動作）：描述使用者的操作\nThen（預期結果）：描述系統應該如何回應\n\n範例：\nGiven 我有一份文字檔案 \"article.txt\"\n  And 檔案內容至少有 500 字\nWhen 我上傳檔案到分析器\n  And 我點擊「開始分析」按鈕\nThen 系統應該回傳 JSON 格式的分析報告\n  And 報告應該包含「熱情度得分」\n\n好處：\n- 清楚明確，不會有歧義\n- 可以直接轉換為測試程式碼\n- 非技術人員也能理解",
+    "tags": ["gherkin", "測試", "驗收條件"],
+    "created_at": "2025-10-17T22:10:00",
+    "updated_at": "2025-10-17T22:10:00",
+    "metadata": {
+      "word_count": 178,
+      "read_time": 1
+    }
+  },
+  "kb_20251017_004": {
+    "id": "kb_20251017_004",
+    "title": "AI 工具選擇指南",
+    "content": "選擇 AI 開發工具時的考量因素：\n\n1. 預算\n   - 免費：Windsurf, Google AI Studio, Gemini CLI\n   - 付費：Cursor ($20/月), GitHub Copilot ($10/月)\n\n2. 使用場景\n   - IDE 開發：Cursor, Windsurf\n   - 快速部署：Lovable, Bolt.new\n   - Prompt 測試：Google AI Studio\n   - 批次處理：Claude CLI, Gemini CLI\n\n3. 技術棧\n   - Python/AI：Google Colab + Gemini\n   - 全棧 Web：Bolt.new, Lovable\n   - 前端 UI：v0.dev\n\n建議：先從免費工具開始，找到適合自己的工作流程後再考慮付費工具。",
+    "tags": ["ai工具", "開發工具", "工具選擇"],
+    "created_at": "2025-10-17T22:15:00",
+    "updated_at": "2025-10-17T22:15:00",
+    "metadata": {
+      "word_count": 168,
+      "read_time": 1
+    }
+  },
+  "kb_20251017_005": {
+    "id": "kb_20251017_005",
+    "title": "TDD 紅綠重構循環",
+    "content": "測試驅動開發（TDD）的核心是紅綠重構循環：\n\n🔴 RED（紅燈）\n- 先寫一個會失敗的測試\n- 這證明測試是有效的\n- 明確定義「成功」的標準\n\n🟢 GREEN（綠燈）\n- 實作最簡單的程式碼讓測試通過\n- 不用追求完美，只要能通過測試\n- 快速驗證功能正確性\n\n🔵 REFACTOR（重構）\n- 改善程式碼品質\n- 保持測試通過\n- 提升可讀性和可維護性\n\n為什麼重要？\n- 確保程式碼有測試覆蓋\n- 減少 bug\n- 讓重構更安全\n- 程式碼更容易理解",
+    "tags": ["tdd", "測試", "開發流程"],
+    "created_at": "2025-10-17T22:20:00",
+    "updated_at": "2025-10-17T22:20:00",
+    "metadata": {
+      "word_count": 156,
+      "read_time": 1
+    }
+  }
+}

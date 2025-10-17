@@ -1,0 +1,92 @@
+# 討論過程和臨時檔案
+內容審查與改進計劃.md
+專案重組進度報告.md
+討論範例及細節.md
+
+# 舊版檔案（如果需要保留舊版，可以註解掉這行）
+# 開發大綱.md
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# 測試覆蓋率報告
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 臨時檔案
+*.tmp
+*.bak
+*.log
+
+# 環境變數
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虛擬環境
+venv/
+ENV/
+env/
+.venv
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# 資料庫檔案
+*.db
+*.sqlite
+*.sqlite3
+knowledge_base.json
+kb.json
+test_kb.json
+
+# 生成的檔案
+analysis_*.json
+lesson_*.md
+knowledge_base_*.md
+knowledge_base_*.json

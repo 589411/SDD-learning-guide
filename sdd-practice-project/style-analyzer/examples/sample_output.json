@@ -1,0 +1,28 @@
+{
+  "file_name": "sample_article.txt",
+  "analysis_date": "2025-10-17T22:00:00",
+  "word_count": 245,
+  "sentence_count": 15,
+  "metrics": {
+    "enthusiasm_score": 0.85,
+    "avg_sentence_length": 16.3,
+    "max_sentence_length": 28,
+    "min_sentence_length": 6,
+    "question_ratio": 0.2,
+    "top_phrases": [
+      {
+        "phrase": "AI 時代",
+        "count": 3
+      },
+      {
+        "phrase": "具體來說",
+        "count": 2
+      },
+      {
+        "phrase": "換句話說",
+        "count": 2
+      }
+    ]
+  },
+  "warnings": []
+}
