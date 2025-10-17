@@ -1,0 +1,39 @@
+# 討論過程和臨時檔案
+內容審查與改進計劃.md
+專案重組進度報告.md
+
+# 舊版檔案（如果需要保留舊版，可以註解掉這行）
+# 開發大綱.md
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# 測試覆蓋率報告
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 臨時檔案
+*.tmp
+*.bak
+*.log
+
+# 環境變數
+.env
+.env.local
+.env.*.local
