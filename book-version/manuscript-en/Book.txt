@@ -1,0 +1,27 @@
+# Book Chapter Order
+
+# English Version
+
+# Part 0: Getting Started
+chapter-00.md
+chapter-0.1.md
+chapter-0.2.md
+chapter-0.3.md
+
+# Part 1: Foundation
+chapter-01.md
+chapter-02.md
+
+# Part 2: Core
+chapter-03.md
+chapter-04.md
+
+# Part 3: Practice
+chapter-05.md
+chapter-06.md
+chapter-07.md
+
+# Part 4: Advanced
+chapter-08.md
+chapter-09.md
+

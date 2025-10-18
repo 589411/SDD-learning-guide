@@ -1,0 +1,172 @@
+# MkDocs 配置文件
+# 用於生成 GitHub Pages 書籍網站
+
+site_name: AI 時代的規格驅動開發
+site_description: 非工程師的程式學習指南：用 Spec-Driven Development 和 AI 工具，8 週掌握軟體開發
+site_author: Joseph
+site_url: https://joseph.github.io/SDD-learning-guide
+
+# Repository
+repo_name: SDD-learning-guide
+repo_url: https://github.com/joseph/SDD-learning-guide
+edit_uri: edit/main/
+
+# Copyright
+copyright: Copyright &copy; 2024 Joseph
+
+# Theme
+theme:
+  name: material
+  language: zh-TW
+  palette:
+    # 淺色模式
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切換到深色模式
+    # 深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切換到淺色模式
+  
+  font:
+    text: Noto Sans TC
+    code: Roboto Mono
+  
+  features:
+    - navigation.instant      # 即時載入
+    - navigation.tracking     # 追蹤 URL
+    - navigation.tabs         # 頂部導航標籤
+    - navigation.sections     # 章節導航
+    - navigation.expand       # 展開導航
+    - navigation.top          # 返回頂部按鈕
+    - navigation.footer       # 頁腳導航
+    - search.suggest          # 搜尋建議
+    - search.highlight        # 搜尋高亮
+    - search.share            # 分享搜尋
+    - toc.follow              # 目錄跟隨
+    - content.code.copy       # 程式碼複製按鈕
+    - content.action.edit     # 編輯按鈕
+    - content.action.view     # 查看按鈕
+
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Plugins
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - tags
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Navigation
+nav:
+  - 首頁: index.md
+  
+  - 開始之前:
+    - 前言：AI 時代的軟體開發新典範: 01_前言_AI時代的軟體開發新典範.md
+    - 給跨領域學習者的信: 02_給跨領域學習者的信.md
+    - 如何使用這本電子書: 03_如何使用這本電子書.md
+    - 核心理念：AI 時代的人機協作: 核心理念_AI時代的人機協作.md
+  
+  - 基礎篇：
+    - 模組 0：規格驅動思維: 模組內容/模組0_規格驅動思維.md
+    - 模組 1：開發者工具包: 模組內容/模組1_開發者工具包.md
+  
+  - 核心篇：
+    - 模組 2：SDD 核心循環實戰: 模組內容/模組2_SDD核心循環實戰.md
+    - 模組 3：軟體架構入門: 模組內容/模組3_軟體架構入門.md
+  
+  - 實戰篇：
+    - 實戰專案導讀: 實戰專案/實戰專案導讀.md
+    - 專案總覽: sdd-practice-project/README.md
+    - 專案 1：風格分析器: sdd-practice-project/README.md
+    - 專案 2：新聞轉教案: sdd-practice-project/news-to-lesson/README.md
+    - 專案 3：知識庫管理: sdd-practice-project/knowledge-base/README.md
+  
+  - 進階篇：
+    - 模組 4：進階 AI 協作: 模組內容/模組4_進階AI協作.md
+    - AI 賦能學習指南: 04_AI賦能學習指南.md
+  
+  - 學習資源:
+    - 快速開始指南: 學習資源/快速開始指南.md
+    - AI 學習 Prompt 大全: 學習資源/AI學習Prompt大全.md
+    - 關鍵字速查表: 學習資源/關鍵字速查表.md
+  
+  - 學習支援:
+    - 常見問題 FAQ: 學習支援/常見問題FAQ.md
+    - 學習卡關怎麼辦: 學習支援/學習卡關怎麼辦.md
+    - 社群與資源: 學習支援/社群與資源.md
+  
+  - 附錄:
+    - 術語表: 附錄/術語表.md
+    - 參考資料: 附錄/參考資料.md
+    - 學習紀錄模板: 附錄/學習紀錄模板.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/joseph/SDD-learning-guide
+  
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # 替換為你的 Google Analytics ID
+  
+  version:
+    provider: mike
+
+# Custom CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Custom JavaScript
+extra_javascript:
+  - javascripts/extra.js

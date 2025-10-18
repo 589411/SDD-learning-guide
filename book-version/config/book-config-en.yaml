@@ -1,0 +1,357 @@
+# 📖 Book Structure Configuration File (English Version)
+# Defines how to generate the English book version from GitHub Repo content
+
+book_metadata:
+  title: "Coding with AI: A Non-Engineer's Guide"
+  subtitle: "Master Programming in 8 Weeks Using Spec-Driven Development"
+  author: "Joseph"
+  version: "1.0.0"
+  language: "en-US"
+  target_audience: "Non-engineers, Cross-domain learners"
+  learning_duration: "8 weeks"
+  
+# Book structure definition
+book_structure:
+  
+  # Part 0: Getting Started
+  part0:
+    title: "Getting Started"
+    description: "Understand the core philosophy and how to use this book"
+    chapters:
+      - chapter_number: 0
+        title: "Preface: The New Paradigm of Software Development in the AI Era"
+        source_file: "01_前言_AI時代的軟體開發新典範.md"
+        translate: true
+        include_elements: ["reading_time", "key_takeaways"]
+        
+      - chapter_number: 0.1
+        title: "A Letter to Cross-Domain Learners"
+        source_file: "02_給跨領域學習者的信.md"
+        translate: true
+        include_elements: ["reading_time"]
+        
+      - chapter_number: 0.2
+        title: "How to Use This E-Book"
+        source_file: "03_如何使用這本電子書.md"
+        translate: true
+        include_elements: ["reading_time", "learning_checklist"]
+        
+      - chapter_number: 0.3
+        title: "Core Philosophy: SDD + AI is the Best Way for Beginners to Learn Programming"
+        source_file: "核心理念_AI時代的人機協作.md"
+        translate: true
+        include_elements: ["reading_time", "key_takeaways"]
+
+  # Part 1: Foundation (Week 1-2)
+  part1:
+    title: "Foundation: Building Spec-Driven Thinking"
+    description: "Master SDD core concepts and development tools"
+    learning_weeks: [1, 2]
+    chapters:
+      - chapter_number: 1
+        title: "Spec-Driven Thinking: The Bridge from Ideas to Code"
+        source_file: "模組內容/模組0_規格驅動思維.md"
+        translate: true
+        include_elements: 
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "practice_tasks"
+          - "self_check"
+          - "common_mistakes"
+        add_content:
+          practice_task_1:
+            title: "Practice: Write Your First Specification"
+            description: "Choose a simple function (like a calculator) and write a complete specification"
+            time: "30 minutes"
+            checkpoint: "Specification includes input, output, and validation conditions"
+            
+      - chapter_number: 2
+        title: "Developer Toolkit: Complete Guide to 13 AI Tools"
+        source_file: "模組內容/模組1_開發者工具包.md"
+        translate: true
+        include_elements:
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "practice_tasks"
+          - "self_check"
+          - "tool_comparison_table"
+        add_content:
+          practice_task_1:
+            title: "Practice: Set Up Your Development Environment"
+            description: "Install and configure at least 3 AI tools"
+            time: "1 hour"
+            checkpoint: "Successfully run your first AI-assisted program"
+
+  # Part 2: Core (Week 3-5)
+  part2:
+    title: "Core: SDD Practice Loop"
+    description: "Master the complete spec-driven development process"
+    learning_weeks: [3, 4, 5]
+    chapters:
+      - chapter_number: 3
+        title: "SDD Core Loop in Practice"
+        source_file: "模組內容/模組2_SDD核心循環實戰.md"
+        translate: true
+        include_elements:
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "practice_tasks"
+          - "self_check"
+          - "workflow_diagram"
+        add_content:
+          practice_task_1:
+            title: "Practice: Complete SDD Loop"
+            description: "Complete process from specification to testing"
+            time: "2 hours"
+            checkpoint: "Pass all test cases"
+            
+      - chapter_number: 4
+        title: "Introduction to Software Architecture: YAGNI Principle in Practice"
+        source_file: "模組內容/模組3_軟體架構入門.md"
+        translate: true
+        include_elements:
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "practice_tasks"
+          - "self_check"
+          - "architecture_examples"
+        add_content:
+          practice_task_1:
+            title: "Practice: Refactor Over-Engineered Code"
+            description: "Apply YAGNI principle to simplify code"
+            time: "1.5 hours"
+            checkpoint: "Reduce code lines by 30% or more"
+
+  # Part 3: Practice (Week 6-7)
+  part3:
+    title: "Practice: Three Complete Projects"
+    description: "Consolidate SDD skills through hands-on projects"
+    learning_weeks: [6, 7]
+    chapters:
+      - chapter_number: 5
+        title: "Project 1: Style Analyzer"
+        source_file: "sdd-practice-project/README.md"
+        translate: true
+        source_sections: ["Project 1"]
+        include_elements:
+          - "project_overview"
+          - "learning_objectives"
+          - "spec_examples"
+          - "implementation_guide"
+          - "testing_guide"
+          - "colab_notebook_link"
+        add_content:
+          project_checklist:
+            - "[ ] Understand project requirements"
+            - "[ ] Write complete specifications"
+            - "[ ] Implement core features"
+            - "[ ] Pass all tests"
+            - "[ ] Complete Colab Notebook"
+            
+      - chapter_number: 6
+        title: "Project 2: News-to-Lesson System"
+        source_file: "sdd-practice-project/news-to-lesson/README.md"
+        translate: true
+        include_elements:
+          - "project_overview"
+          - "learning_objectives"
+          - "spec_examples"
+          - "implementation_guide"
+          - "testing_guide"
+          - "colab_notebook_link"
+        add_content:
+          project_checklist:
+            - "[ ] Understand project requirements"
+            - "[ ] Write complete specifications"
+            - "[ ] Implement core features"
+            - "[ ] Pass all tests"
+            - "[ ] Complete Colab Notebook"
+            
+      - chapter_number: 7
+        title: "Project 3: Knowledge Base Management System"
+        source_file: "sdd-practice-project/knowledge-base/README.md"
+        translate: true
+        include_elements:
+          - "project_overview"
+          - "learning_objectives"
+          - "spec_examples"
+          - "implementation_guide"
+          - "testing_guide"
+          - "colab_notebook_link"
+        add_content:
+          project_checklist:
+            - "[ ] Understand project requirements"
+            - "[ ] Write complete specifications"
+            - "[ ] Implement core features"
+            - "[ ] Pass all tests"
+            - "[ ] Complete Colab Notebook"
+
+  # Part 4: Advanced (Week 8)
+  part4:
+    title: "Advanced: Continuous Improvement"
+    description: "Explore advanced techniques and future trends"
+    learning_weeks: [8]
+    chapters:
+      - chapter_number: 8
+        title: "Advanced AI Collaboration Techniques"
+        source_file: "模組內容/模組4_進階AI協作.md"
+        translate: true
+        include_elements:
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "advanced_techniques"
+          - "case_studies"
+          
+      - chapter_number: 9
+        title: "Future Outlook: From Spec-Driven to Intent-Driven"
+        source_file: "04_AI賦能學習指南.md"
+        translate: true
+        source_sections: ["Future Trends"]
+        include_elements:
+          - "reading_time"
+          - "future_trends"
+          - "next_steps"
+
+  # Appendix
+  appendix:
+    title: "Appendix"
+    sections:
+      - title: "Appendix A: AI Learning Prompt Collection"
+        source_file: "學習資源/AI學習Prompt大全.md"
+        translate: true
+        
+      - title: "Appendix B: Frequently Asked Questions"
+        source_file: "學習支援/常見問題FAQ.md"
+        translate: true
+        
+      - title: "Appendix C: Glossary"
+        source_file: "附錄/術語表.md"
+        translate: true
+        
+      - title: "Appendix D: Learning Resources and Community"
+        source_file: "學習支援/社群與資源.md"
+        translate: true
+        
+      - title: "Appendix E: Keyword Quick Reference"
+        source_file: "學習資源/關鍵字速查表.md"
+        translate: true
+
+# Interactive elements configuration
+interactive_elements:
+  
+  # Learning objectives
+  learning_objectives:
+    template: |
+      ## 🎯 Learning Objectives
+      
+      After completing this chapter, you will be able to:
+      {objectives_list}
+      
+      **Estimated learning time:** {estimated_time}
+  
+  # Reading time
+  reading_time:
+    calculate: true  # Auto-calculate (200 words/minute)
+    
+  # Key concepts
+  key_concepts:
+    template: |
+      ## 📚 Core Concepts
+      
+      {concepts_content}
+      
+  # Practice tasks
+  practice_tasks:
+    template: |
+      ## 💻 Practice Tasks
+      
+      ### Task {task_number}: {task_title}
+      
+      **Task Description:** {task_description}
+      
+      **Estimated Time:** {task_time}
+      
+      **Verification:** {task_checkpoint}
+      
+      **Hints:**
+      {task_hints}
+      
+  # Self-check
+  self_check:
+    template: |
+      ## ✅ Self-Check
+      
+      After completing this chapter, please confirm you can:
+      
+      {checklist_items}
+      
+      If any item is not mastered, review the relevant sections.
+      
+  # Common mistakes
+  common_mistakes:
+    template: |
+      ## ⚠️ Common Mistakes and Solutions
+      
+      {mistakes_list}
+      
+  # Learning notes
+  learning_notes:
+    template: |
+      ## 📝 Learning Notes
+      
+      > 💡 **Tip:** Record your learning insights, questions, or thoughts here
+      
+      ---
+      
+      (Space for your notes)
+      
+      ---
+
+# Output format configuration
+output_formats:
+  
+  # Leanpub format
+  leanpub:
+    enabled: true
+    output_dir: "../manuscript-en"
+    book_txt: true  # Generate Book.txt
+    sample_txt: true  # Generate Sample.txt (first 3 chapters)
+    
+  # Publisher format
+  publisher:
+    enabled: true
+    output_dir: "../output/publisher-en"
+    format: "docx"  # docx or pdf
+    include_toc: true  # Include table of contents
+    include_index: true  # Include index
+    page_numbers: true
+    
+# Generation options
+generation_options:
+  # Add interactive elements
+  add_interactive_elements: true
+  
+  # Auto-calculate reading time
+  calculate_reading_time: true
+  
+  # Generate learning progress tracker
+  generate_progress_tracker: true
+  
+  # Include Colab Notebook links
+  include_colab_links: true
+  
+  # Generate chapter summaries
+  generate_chapter_summary: true
+  
+  # Translation options
+  translation:
+    enabled: true
+    source_language: "zh-TW"
+    target_language: "en-US"
+    preserve_code_blocks: true
+    preserve_technical_terms: true

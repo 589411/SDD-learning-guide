@@ -1,0 +1,331 @@
+# 📖 書籍結構配置文件
+# 定義如何從 GitHub Repo 內容生成書籍版本
+
+book_metadata:
+  title: "AI 時代的規格驅動開發：非工程師的程式學習指南"
+  subtitle: "用 Spec-Driven Development 和 AI 工具，8 週掌握軟體開發"
+  author: "Joseph"
+  version: "1.0.0"
+  language: "zh-TW"
+  target_audience: "非軟體工程師、跨領域學習者"
+  learning_duration: "8 週"
+  
+# 書籍結構定義
+book_structure:
+  
+  # Part 0: 開始之前
+  part0:
+    title: "開始之前"
+    description: "了解本書的核心理念和使用方式"
+    chapters:
+      - chapter_number: 0
+        title: "前言：AI 時代的軟體開發新典範"
+        source_file: "01_前言_AI時代的軟體開發新典範.md"
+        include_elements: ["reading_time", "key_takeaways"]
+        
+      - chapter_number: 0.1
+        title: "給跨領域學習者的信"
+        source_file: "02_給跨領域學習者的信.md"
+        include_elements: ["reading_time"]
+        
+      - chapter_number: 0.2
+        title: "如何使用這本電子書"
+        source_file: "03_如何使用這本電子書.md"
+        include_elements: ["reading_time", "learning_checklist"]
+        
+      - chapter_number: 0.3
+        title: "核心理念：SDD + AI 是小白學程式的最佳方式"
+        source_file: "核心理念_AI時代的人機協作.md"
+        include_elements: ["reading_time", "key_takeaways"]
+
+  # Part 1: 基礎篇（Week 1-2）
+  part1:
+    title: "基礎篇：建立規格驅動思維"
+    description: "掌握 SDD 核心概念和開發工具"
+    learning_weeks: [1, 2]
+    chapters:
+      - chapter_number: 1
+        title: "規格驅動思維：從想法到程式的橋樑"
+        source_file: "模組內容/模組0_規格驅動思維.md"
+        include_elements: 
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "practice_tasks"
+          - "self_check"
+          - "common_mistakes"
+        add_content:
+          practice_task_1:
+            title: "實作：撰寫你的第一份規格"
+            description: "選擇一個簡單功能（如計算機），撰寫完整規格"
+            time: "30 分鐘"
+            checkpoint: "規格包含輸入、輸出、驗證條件"
+            
+      - chapter_number: 2
+        title: "開發者工具包：13 個 AI 工具完全指南"
+        source_file: "模組內容/模組1_開發者工具包.md"
+        include_elements:
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "practice_tasks"
+          - "self_check"
+          - "tool_comparison_table"
+        add_content:
+          practice_task_1:
+            title: "實作：搭建你的開發環境"
+            description: "安裝並配置至少 3 個 AI 工具"
+            time: "1 小時"
+            checkpoint: "成功運行第一個 AI 輔助程式"
+
+  # Part 2: 核心篇（Week 3-5）
+  part2:
+    title: "核心篇：SDD 實戰循環"
+    description: "掌握完整的規格驅動開發流程"
+    learning_weeks: [3, 4, 5]
+    chapters:
+      - chapter_number: 3
+        title: "SDD 核心循環實戰"
+        source_file: "模組內容/模組2_SDD核心循環實戰.md"
+        include_elements:
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "practice_tasks"
+          - "self_check"
+          - "workflow_diagram"
+        add_content:
+          practice_task_1:
+            title: "實作：完整 SDD 循環"
+            description: "從規格到測試的完整流程"
+            time: "2 小時"
+            checkpoint: "通過所有測試案例"
+            
+      - chapter_number: 4
+        title: "軟體架構入門：YAGNI 原則實踐"
+        source_file: "模組內容/模組3_軟體架構入門.md"
+        include_elements:
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "practice_tasks"
+          - "self_check"
+          - "architecture_examples"
+        add_content:
+          practice_task_1:
+            title: "實作：重構過度設計的程式"
+            description: "應用 YAGNI 原則簡化程式碼"
+            time: "1.5 小時"
+            checkpoint: "程式碼行數減少 30% 以上"
+
+  # Part 3: 實戰篇（Week 6-7）
+  part3:
+    title: "實戰篇：三個完整專案"
+    description: "透過實戰專案鞏固 SDD 技能"
+    learning_weeks: [6, 7]
+    chapters:
+      - chapter_number: 5
+        title: "專案 1：風格分析器"
+        source_file: "sdd-practice-project/README.md"
+        source_sections: ["專案1"]
+        include_elements:
+          - "project_overview"
+          - "learning_objectives"
+          - "spec_examples"
+          - "implementation_guide"
+          - "testing_guide"
+          - "colab_notebook_link"
+        add_content:
+          project_checklist:
+            - "[ ] 理解專案需求"
+            - "[ ] 撰寫完整規格"
+            - "[ ] 實作核心功能"
+            - "[ ] 通過所有測試"
+            - "[ ] 完成 Colab Notebook"
+            
+      - chapter_number: 6
+        title: "專案 2：新聞轉教案系統"
+        source_file: "sdd-practice-project/news-to-lesson/README.md"
+        include_elements:
+          - "project_overview"
+          - "learning_objectives"
+          - "spec_examples"
+          - "implementation_guide"
+          - "testing_guide"
+          - "colab_notebook_link"
+        add_content:
+          project_checklist:
+            - "[ ] 理解專案需求"
+            - "[ ] 撰寫完整規格"
+            - "[ ] 實作核心功能"
+            - "[ ] 通過所有測試"
+            - "[ ] 完成 Colab Notebook"
+            
+      - chapter_number: 7
+        title: "專案 3：知識庫管理系統"
+        source_file: "sdd-practice-project/knowledge-base/README.md"
+        include_elements:
+          - "project_overview"
+          - "learning_objectives"
+          - "spec_examples"
+          - "implementation_guide"
+          - "testing_guide"
+          - "colab_notebook_link"
+        add_content:
+          project_checklist:
+            - "[ ] 理解專案需求"
+            - "[ ] 撰寫完整規格"
+            - "[ ] 實作核心功能"
+            - "[ ] 通過所有測試"
+            - "[ ] 完成 Colab Notebook"
+
+  # Part 4: 進階篇（Week 8）
+  part4:
+    title: "進階篇：持續精進"
+    description: "探索進階技巧和未來趨勢"
+    learning_weeks: [8]
+    chapters:
+      - chapter_number: 8
+        title: "進階 AI 協作技巧"
+        source_file: "模組內容/模組4_進階AI協作.md"
+        include_elements:
+          - "learning_objectives"
+          - "reading_time"
+          - "key_concepts"
+          - "advanced_techniques"
+          - "case_studies"
+          
+      - chapter_number: 9
+        title: "未來展望：從 Spec-Driven 到 Intent-Driven"
+        source_file: "04_AI賦能學習指南.md"
+        source_sections: ["未來趨勢"]
+        include_elements:
+          - "reading_time"
+          - "future_trends"
+          - "next_steps"
+
+  # 附錄
+  appendix:
+    title: "附錄"
+    sections:
+      - title: "附錄 A：AI 學習 Prompt 大全"
+        source_file: "學習資源/AI學習Prompt大全.md"
+        
+      - title: "附錄 B：常見問題 FAQ"
+        source_file: "學習支援/常見問題FAQ.md"
+        
+      - title: "附錄 C：術語表"
+        source_file: "附錄/術語表.md"
+        
+      - title: "附錄 D：學習資源與社群"
+        source_file: "學習支援/社群與資源.md"
+        
+      - title: "附錄 E：關鍵字速查表"
+        source_file: "學習資源/關鍵字速查表.md"
+
+# 互動元素配置
+interactive_elements:
+  
+  # 學習目標
+  learning_objectives:
+    template: |
+      ## 🎯 本章學習目標
+      
+      完成本章後，你將能夠：
+      {objectives_list}
+      
+      **預計學習時間：** {estimated_time}
+  
+  # 閱讀時間
+  reading_time:
+    calculate: true  # 自動計算（以 200 字/分鐘）
+    
+  # 關鍵概念
+  key_concepts:
+    template: |
+      ## 📚 核心概念
+      
+      {concepts_content}
+      
+  # 實作任務
+  practice_tasks:
+    template: |
+      ## 💻 實作任務
+      
+      ### 任務 {task_number}：{task_title}
+      
+      **任務描述：** {task_description}
+      
+      **預期時間：** {task_time}
+      
+      **驗證方式：** {task_checkpoint}
+      
+      **提示：**
+      {task_hints}
+      
+  # 自我檢測
+  self_check:
+    template: |
+      ## ✅ 自我檢測
+      
+      完成本章後，請確認你能夠：
+      
+      {checklist_items}
+      
+      如果有任何項目尚未掌握，建議回顧相關章節。
+      
+  # 常見錯誤
+  common_mistakes:
+    template: |
+      ## ⚠️ 常見錯誤與解決方案
+      
+      {mistakes_list}
+      
+  # 學習筆記區
+  learning_notes:
+    template: |
+      ## 📝 學習筆記
+      
+      > 💡 **提示：** 在這裡記錄你的學習心得、疑問或想法
+      
+      ---
+      
+      （留白供讀者書寫）
+      
+      ---
+
+# 輸出格式配置
+output_formats:
+  
+  # Leanpub 格式
+  leanpub:
+    enabled: true
+    output_dir: "../manuscript"
+    book_txt: true  # 生成 Book.txt
+    sample_txt: true  # 生成 Sample.txt（前 3 章）
+    
+  # 出版社格式
+  publisher:
+    enabled: true
+    output_dir: "../output/publisher"
+    format: "docx"  # docx 或 pdf
+    include_toc: true  # 包含目錄
+    include_index: true  # 包含索引
+    page_numbers: true
+    
+# 生成選項
+generation_options:
+  # 是否加入互動元素
+  add_interactive_elements: true
+  
+  # 是否自動計算閱讀時間
+  calculate_reading_time: true
+  
+  # 是否生成學習進度追蹤表
+  generate_progress_tracker: true
+  
+  # 是否包含 Colab Notebook 連結
+  include_colab_links: true
+  
+  # 是否生成章節摘要
+  generate_chapter_summary: true

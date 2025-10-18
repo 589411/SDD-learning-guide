@@ -1,0 +1,33 @@
+{
+  "name": "sdd-book-generator",
+  "version": "1.0.0",
+  "description": "自動從 GitHub Repo 生成書籍版本",
+  "main": "generate-book.js",
+  "scripts": {
+    "generate:leanpub": "node generate-book.js --format leanpub",
+    "generate:publisher": "node generate-book.js --format publisher",
+    "generate:all": "node generate-book.js --format all",
+    "preview": "node generate-book.js --format leanpub --preview",
+    "validate": "node validate-config.js",
+    "translate": "node translate-to-english.js"
+  },
+  "keywords": [
+    "book-generator",
+    "leanpub",
+    "markdown",
+    "automation"
+  ],
+  "author": "Joseph",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.0.0",
+    "fs-extra": "^11.2.0",
+    "mustache": "^4.2.0",
+    "gray-matter": "^4.0.3",
+    "reading-time": "^1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
+}

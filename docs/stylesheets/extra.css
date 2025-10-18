@@ -1,0 +1,189 @@
+/* 自定義樣式 */
+
+/* 改善中文字體渲染 */
+body {
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+}
+
+/* 標題樣式 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+/* 程式碼區塊 */
+code {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+/* 引用區塊 */
+blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding-left: 1em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--md-default-fg-color--light);
+}
+
+/* 表格樣式 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+}
+
+table th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  font-weight: 600;
+  padding: 0.8em;
+}
+
+table td {
+  padding: 0.8em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+table tr:hover {
+  background-color: var(--md-default-bg-color--light);
+}
+
+/* 任務清單 */
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+/* 警告框樣式 */
+.admonition {
+  margin: 1.5em 0;
+  padding: 0.8em 1em;
+  border-radius: 0.3em;
+}
+
+.admonition.success {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4caf50;
+}
+
+.admonition.tip {
+  background-color: #fff9c4;
+  border-left: 4px solid #ffc107;
+}
+
+.admonition.warning {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+}
+
+.admonition.danger {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+/* 按鈕樣式 */
+.md-button {
+  margin: 0.5em 0.5em 0.5em 0;
+  padding: 0.6em 1.2em;
+  border-radius: 0.3em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 導航標籤 */
+.md-tabs {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* 搜尋框 */
+.md-search__input {
+  border-radius: 0.3em;
+}
+
+/* 目錄 */
+.md-nav__link--active {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+/* 頁腳 */
+.md-footer {
+  margin-top: 3em;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 76.1875em) {
+  body {
+    font-size: 0.9em;
+  }
+}
+
+/* 程式碼複製按鈕 */
+.md-clipboard {
+  transition: opacity 0.3s ease;
+}
+
+.md-clipboard:hover {
+  opacity: 1;
+}
+
+/* 學習進度條（自定義） */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1em 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--md-primary-fg-color);
+  transition: width 0.3s ease;
+}
+
+/* 章節卡片 */
+.chapter-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5em;
+  padding: 1.5em;
+  margin: 1em 0;
+  transition: all 0.3s ease;
+}
+
+.chapter-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Emoji 大小調整 */
+.twemoji {
+  height: 1.2em;
+  vertical-align: text-bottom;
+}
+
+/* 印刷樣式 */
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+  }
+}

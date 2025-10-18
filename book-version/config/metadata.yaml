@@ -1,0 +1,91 @@
+# 📖 書籍元數據配置
+
+# 基本資訊
+book:
+  title: "AI 時代的規格驅動開發"
+  subtitle: "非工程師的程式學習指南：用 Spec-Driven Development 和 AI 工具，8 週掌握軟體開發"
+  author: "Joseph"
+  publisher: "待定"
+  edition: "第一版"
+  version: "1.0.0"
+  language: "zh-TW"
+  isbn: "待分配"
+  
+# 出版資訊
+publication:
+  status: "draft"  # draft, review, published
+  publish_date: "2025-01-01"
+  last_updated: "2024-10-18"
+  
+# 目標讀者
+target_audience:
+  primary: "非軟體工程師、跨領域學習者"
+  secondary: "想學習 AI 輔助開發的初學者"
+  prerequisites: 
+    - "基本電腦操作能力"
+    - "願意學習新事物的心態"
+    - "無需程式設計背景"
+  
+# 學習規劃
+learning_plan:
+  total_duration: "8 週"
+  weekly_hours: "5-8 小時"
+  total_chapters: 10
+  practice_projects: 3
+  
+# 書籍特色
+features:
+  - "結合 Spec-Driven Development 和 AI 工具"
+  - "完整的 8 週學習路徑"
+  - "3 個實戰專案含 Colab Notebooks"
+  - "13 個 AI 工具詳細介紹"
+  - "互動式學習檢核清單"
+  - "YAGNI 原則實踐指南"
+  
+# 技術棧
+tech_stack:
+  languages:
+    - JavaScript
+    - Python
+  tools:
+    - GitHub Copilot
+    - Cursor
+    - Windsurf
+    - Claude
+    - ChatGPT
+  frameworks:
+    - Node.js
+    - Colab Notebooks
+    
+# 版權資訊
+copyright:
+  holder: "Joseph"
+  year: 2024
+  license: "All Rights Reserved"  # 或 "CC BY-NC-SA 4.0"
+  
+# 聯絡資訊
+contact:
+  author_email: "待補充"
+  github_repo: "https://github.com/joseph/SDD-learning-guide"
+  community: "待建立"
+  
+# 行銷資訊
+marketing:
+  tagline: "讓 AI 成為你的程式導師，8 週從零到一"
+  keywords:
+    - "規格驅動開發"
+    - "AI 輔助程式設計"
+    - "非工程師學程式"
+    - "Spec-Driven Development"
+    - "GitHub Copilot"
+    - "AI 工具"
+  categories:
+    - "程式設計"
+    - "人工智慧"
+    - "自我學習"
+    
+# 定價（Leanpub）
+pricing:
+  minimum: 9.99
+  suggested: 19.99
+  currency: "USD"

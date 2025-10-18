@@ -1,0 +1,55 @@
+# GitHub Actions 自動部署 MkDocs 到 GitHub Pages
+
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 程式碼
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 設定 Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: 安裝依賴
+        run: |
+          pip install -r requirements.txt
+
+      - name: 建立文件連結
+        run: |
+          # 將所有 Markdown 文件複製到 docs 目錄
+          # 保持原有目錄結構
+          
+          # 複製主要文件
+          cp -r 模組內容 docs/ 2>/dev/null || true
+          cp -r 學習資源 docs/ 2>/dev/null || true
+          cp -r 學習支援 docs/ 2>/dev/null || true
+          cp -r 附錄 docs/ 2>/dev/null || true
+          cp -r 實戰專案 docs/ 2>/dev/null || true
+          cp -r sdd-practice-project docs/ 2>/dev/null || true
+          
+          # 複製根目錄的 Markdown 文件
+          cp *.md docs/ 2>/dev/null || true
+          
+          # 確保 index.md 存在
+          if [ ! -f docs/index.md ]; then
+            echo "警告: docs/index.md 不存在"
+          fi
+
+      - name: 部署到 GitHub Pages
+        run: |
+          mkdocs gh-deploy --force --clean --verbose
