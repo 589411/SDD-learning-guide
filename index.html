@@ -2,14 +2,433 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=./README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SDD 開發技術 - GitHub Pages</title>
-    <script>
-      window.location.replace('./README.html');
-    </script>
+    <meta name="description" content="AI 時代的軟體開發實戰指南｜專為非軟體工程師設計的 SDD 完整教材" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>AI 時代的軟體開發實戰指南</title>
+    <style>
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --border: #e2e8f0;
+        --accent: #eff6ff;
+        --success: #dcfce7;
+        --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", sans-serif;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 260px);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover { text-decoration: underline; }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 72px 0 40px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--primary-dark);
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        font-size: clamp(32px, 6vw, 56px);
+        line-height: 1.15;
+        margin: 0 0 16px;
+      }
+
+      .lead {
+        font-size: 18px;
+        color: var(--muted);
+        max-width: 800px;
+        margin-bottom: 28px;
+      }
+
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 12px;
+        font-weight: 700;
+        border: 1px solid transparent;
+        transition: all .2s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #fff;
+      }
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        text-decoration: none;
+      }
+
+      .btn-secondary {
+        background: #fff;
+        color: var(--text);
+        border-color: var(--border);
+      }
+      .btn-secondary:hover {
+        background: #f8fafc;
+        text-decoration: none;
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        margin: 28px 0 8px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .stat-number {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+
+      .section {
+        padding: 28px 0;
+      }
+
+      .section h2 {
+        font-size: 30px;
+        margin: 0 0 10px;
+      }
+
+      .section p.section-intro {
+        color: var(--muted);
+        margin-top: 0;
+        margin-bottom: 22px;
+      }
+
+      .two-col {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .three-col {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      ul.clean {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .path {
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+
+      .path h2,
+      .path h3 {
+        color: #fff;
+      }
+
+      .path .card {
+        background: rgba(255,255,255,0.05);
+        border-color: rgba(255,255,255,0.12);
+        box-shadow: none;
+      }
+
+      .path a { color: #93c5fd; }
+
+      .footer {
+        padding: 40px 0 56px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .tag {
+        display: inline-block;
+        margin: 4px 8px 0 0;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: #f1f5f9;
+        color: #334155;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .highlight {
+        background: var(--success);
+        border-left: 4px solid #22c55e;
+        padding: 16px 18px;
+        border-radius: 12px;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding-top: 48px;
+        }
+
+        .card {
+          padding: 18px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p>重新導向中…如果沒有自動跳轉，請前往 <a href="./README.html">README.html</a></p>
+    <header class="hero">
+      <div class="container">
+        <div class="badge">AI 時代 × 規格驅動開發 × 非工程師友善</div>
+        <h1>AI 時代的軟體開發實戰指南</h1>
+        <p class="lead">
+          一套專為非軟體工程師設計的 SDD（Spec-Driven Development）完整教材。
+          你不需要先成為傳統工程師，才開始打造產品；你可以先學會定義需求、寫規格、驗收成果，並與 AI 協作完成開發。
+        </p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="./00_電子書首頁.md">開始閱讀</a>
+          <a class="btn btn-secondary" href="./README.md">查看原始 README</a>
+          <a class="btn btn-secondary" href="https://github.com/589411/SDD-learning-guide">查看 GitHub Repo</a>
+        </div>
+        <div>
+          <span class="tag">零基礎友善</span>
+          <span class="tag">8 週學習路線</span>
+          <span class="tag">3 個 AI 實戰專案</span>
+          <span class="tag">Python / JavaScript / Notebook</span>
+        </div>
+        <div class="grid stats">
+          <div class="card">
+            <div class="stat-number">5</div>
+            <div>核心學習模組</div>
+          </div>
+          <div class="card">
+            <div class="stat-number">3</div>
+            <div>AI 實戰專案</div>
+          </div>
+          <div class="card">
+            <div class="stat-number">8 週</div>
+            <div>推薦新手學習計畫</div>
+          </div>
+          <div class="card">
+            <div class="stat-number">50–70 小時</div>
+            <div>完整學習投入時間</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h2>這套教材適合誰？</h2>
+          <p class="section-intro">如果你不是資訊本科，但想進入軟體、AI 應用、產品開發，這套教材就是為你設計的。</p>
+          <div class="grid two-col">
+            <div class="card">
+              <h3>很適合你，如果你是：</h3>
+              <ul class="clean">
+                <li>非資訊背景，想轉職軟體開發</li>
+                <li>在職工作者，想學習 AI 輔助開發</li>
+                <li>產品經理、專案管理者、分析師，想提升技術理解力</li>
+                <li>曾被傳統教材嚇退，但仍想再試一次的初學者</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>完成後你會得到：</h3>
+              <ul class="clean">
+                <li>需求分析與規格撰寫能力</li>
+                <li>與 AI 協作開發的實戰方法</li>
+                <li>3 個可展示的 AI 應用作品</li>
+                <li>從想法到驗收的完整開發思維</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>核心理念</h2>
+          <p class="section-intro">AI 工具會持續進化，但真正重要的是：你能不能定義問題、說清楚需求、判斷成果是否有價值。</p>
+          <div class="grid three-col">
+            <div class="card">
+              <h3>1. 關鍵字驅動學習</h3>
+              <p>不需要一次記住所有知識。先掌握核心概念、知道該問什麼，再用 AI 幫你補齊細節。</p>
+            </div>
+            <div class="card">
+              <h3>2. AI 是超級助教</h3>
+              <p>用 AI 解釋觀念、生成測試、協助寫程式、進行除錯與複習，而不是被動照抄答案。</p>
+            </div>
+            <div class="card">
+              <h3>3. 規格先行</h3>
+              <p>在開發前先定義需求、功能與驗收標準，降低溝通成本，也讓 AI 更容易幫你產出正確結果。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section path">
+        <div class="container">
+          <h2>建議學習路徑</h2>
+          <p class="section-intro">推薦先走新手路徑，8 週內逐步建立觀念、工具能力與實作成果。</p>
+          <div class="grid three-col">
+            <div class="card">
+              <h3>🥉 新手路徑</h3>
+              <p>8 週，每週約 6 小時。適合零基礎、想穩定打底的人。</p>
+              <ul class="clean">
+                <li>Week 1–2：模組 0、模組 1</li>
+                <li>Week 3–4：模組 2 + 專案 1</li>
+                <li>Week 5–6：模組 3 + 專案 2</li>
+                <li>Week 7–8：模組 4 + 專案 3</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>🥈 快速路徑</h3>
+              <p>4 週，每週約 10 小時。適合已有基礎、想快速進入實作的人。</p>
+              <ul class="clean">
+                <li>每週完成一個主題或專案</li>
+                <li>重點放在實作與作品產出</li>
+                <li>可跳讀部分理論內容</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>🥇 深度路徑</h3>
+              <p>12 週，每週約 8 小時。適合準備轉職或想建立完整作品集的人。</p>
+              <ul class="clean">
+                <li>完整閱讀所有教材</li>
+                <li>完成所有進階挑戰</li>
+                <li>強化測試、架構與整合能力</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>開始之前：必讀內容</h2>
+          <p class="section-intro">如果你是第一次接觸這套教材，建議先從這幾篇開始。</p>
+          <div class="grid two-col">
+            <div class="card">
+              <h3>入門閱讀</h3>
+              <ul class="clean">
+                <li><a href="./00_電子書首頁.md">📘 電子書首頁</a></li>
+                <li><a href="./01_前言_AI時代的軟體開發新典範.md">📖 前言：AI時代的軟體開發新典範</a></li>
+                <li><a href="./03_如何使用這本電子書.md">🎯 如何使用這本電子書</a></li>
+                <li><a href="./04_AI賦能學習指南.md">🤖 AI 賦能學習指南</a></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>學習支援</h3>
+              <ul class="clean">
+                <li><a href="./學習路線圖.md">🗺️ 學習路線圖</a></li>
+                <li><a href="./學習資源/快速開始指南.md">🚀 快速開始指南</a></li>
+                <li><a href="./學習支援/常見問題FAQ.md">❓ 常見問題 FAQ</a></li>
+                <li><a href="./學習資源/AI學習Prompt大全.md">🧠 AI 學習 Prompt 大全</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>核心模組</h2>
+          <p class="section-intro">從思維、工具、流程、架構到進階 AI 協作，建立完整的 SDD 能力。</p>
+          <div class="grid three-col">
+            <div class="card">
+              <h3><a href="./模組內容/模組0_規格驅動思維.md">模組 0：規格驅動思維</a></h3>
+              <p>學會從「先寫需求與驗收標準」開始，而不是直接跳進程式碼。</p>
+            </div>
+            <div class="card">
+              <h3><a href="./模組內容/模組1_開發者工具包.md">模組 1：開發者工具包</a></h3>
+              <p>建立開發環境、理解工具、熟悉 AI 協作的基本操作。</p>
+            </div>
+            <div class="card">
+              <h3><a href="./模組內容/模組2_SDD核心循環實戰.md">模組 2：SDD 核心循環實戰</a></h3>
+              <p>把規格、測試、實作串起來，實際跑一輪完整的開發流程。</p>
+            </div>
+            <div class="card">
+              <h3><a href="./模組內容/模組3_軟體架構入門.md">模組 3：軟體架構入門</a></h3>
+              <p>理解系統怎麼拆分、資料如何流動、功能如何擴充。</p>
+            </div>
+            <div class="card">
+              <h3><a href="./模組內容/模組4_進階AI協作.md">模組 4：進階 AI 協作</a></h3>
+              <p>進一步掌握與 AI 一起規劃、實作、審查與優化產品的方式。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>實戰專案</h2>
+          <p class="section-intro">用三個漸進式專案，把觀念變成作品，從資料分析到 AI API 整合再到知識系統。</p>
+          <div class="grid three-col">
+            <div class="card">
+              <h3><a href="./sdd-practice-project/style-analyzer/README.md">🎨 專案 1：風格特徵提取器</a></h3>
+              <p>學習文字分析、情感分析與結構化輸出，建立第一個 AI 工具。</p>
+            </div>
+            <div class="card">
+              <h3><a href="./sdd-practice-project/news-to-lesson/README.md">📰 專案 2：新聞轉教案生成器</a></h3>
+              <p>整合 AI API，把新聞內容轉成教學材料，練習 Prompt 與流程設計。</p>
+            </div>
+            <div class="card">
+              <h3><a href="./sdd-practice-project/knowledge-base/README.md">📚 專案 3：個人知識庫管理器</a></h3>
+              <p>打造具備 CRUD、搜尋與匯出的完整系統，建立更完整的架構觀念。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="highlight">
+            <strong>建議你現在就開始：</strong>
+            先閱讀 <a href="./00_電子書首頁.md">電子書首頁</a>，再依照 <a href="./學習路線圖.md">學習路線圖</a> 安排自己的 8 週節奏。
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p><strong>AI 時代的軟體開發實戰指南</strong>｜GitHub Pages 首頁</p>
+        <p>Repository: <a href="https://github.com/589411/SDD-learning-guide">589411/SDD-learning-guide</a></p>
+      </div>
+    </footer>
   </body>
 </html>
